@@ -17,10 +17,10 @@
         
         <!-- Result -->
 		<div class="results">
-			{% if prediction==1 %}
+			{% if data==1 %}
 				<h1><span class='danger'>Sorry! 🙁<br><br>You have LIVER DISEASE <br><br>Please Consult a Doctor.</span></h1>
 				
-			{% elif prediction==2 %}
+			{% elif data==2 %}
 				<h1><span class='safe'>🤩 Congratulation! 🤩<br><br>You DON'T have LIVER DISEASE.</span></h1>
 				
 			{% endif %}
