@@ -10,7 +10,7 @@ def Home():
     return render_template('index.html')
 
 @app.route("/predict", methods=['POST'])
-def predict():
+def prediction():
     if request.method =='POST':
         Age = int(request.form['Age'])
         Gender = int(request.form['Gender'])
@@ -22,10 +22,10 @@ def predict():
         Albumin = float(request.form['Albumin'])
         Albumin_and_Globulin_Ratio = float(request.form['Albumin_and_Globulin_Ratio'])
 
-        values = np.array([[Age,Gender,Total_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,Aspartate_Aminotransferase,Total_Protiens,Albumin,Albumin_and_Globulin_Ratio]])
-        prediction = model.predict(values)
+        arr = np.array([[Age,Gender,Total_Bilirubin,Alkaline_Phosphotase,Alamine_Aminotransferase,Aspartate_Aminotransferase,Total_Protiens,Albumin,Albumin_and_Globulin_Ratio]])
+        prediction = model.predict(arr)
 
-        return render_template('result.html', prediction=prediction)
+        return render_template('result.html', data=prediction)
 
 if __name__ == "__main__":
     app.run()

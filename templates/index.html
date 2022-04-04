@@ -9,10 +9,13 @@
 <body>
     <div class="container">
         <h1 style="font-size:40px; color:rgb(14, 10, 14);">Liver Disease Prediction</h1>
+        <h2 style="font-size:25px; color:rgb(14, 10, 14);">This web application is made to predict liver disease with the following parameters given</h2>
+        <p style="font-size:20px; color:rgb(14, 10, 14);">Fill the form and get your results</p> <br>
+
     </div>
 
     <div class="ml-container">
-        <form action="{{url_for('predict')}}" method="POST">
+        <form action="{{url_for('prediction')}}" method="POST">
             <h3 style="color:rgb(14, 10, 14);">Age</h3>
             <input id="first" name="Age" placeholder="in Year" required="required">
             <br>
