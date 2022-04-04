@@ -6,7 +6,7 @@ body
  background-repeat: no-repeat;
  background-attachment: fixed;
  background-size: cover;
- background-image:url(../image.jpg);
+ background-color:rgb(250, 165, 116);
 }
 
 /* Color */
