@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 app=Flask(__name__)
-model=pickle.load(open('models/liver2.pkl', 'rb'))
+model=pickle.load(open('models/Liver2.pkl', 'rb'))
 
 @app.route('/',methods=['GET'])
 def Home():
